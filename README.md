@@ -1,7 +1,7 @@
 # 💻 LibraryX Documentation
 ## Informations:
 - It's used the simple feature-driven development.
-- The program provides a menu-driven console-based user interface and graphical user interface. The user can start it either by the UI, GUI or executable file LibrabryX.exe.
+- The program provides a menu-driven console-based user interface and graphical user interface. The user can start it either by the UI, GUI (Python must be installed).
 - Implementation employs layered architecture and classes.
 - The repositories have 20 procedurally generated items at startup.
 - Provides specification and tests for all non-UI classes and methods(PyUnit test cases).
