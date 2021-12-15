@@ -3,6 +3,7 @@ from src.domain.Client import Client
 from src.domain.ClientValidator import ClientValidator
 import pickle
 from copy import deepcopy
+import os
 
 class ClientBinaryRepository(ClientRepository):
     def __init__(self, file_name):
@@ -14,7 +15,11 @@ class ClientBinaryRepository(ClientRepository):
     def read_file(self):
         try:
             data = []
-            with open(self.__file_name, "rb") as f:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "rb") as f:
                 data = pickle.load(f)
 
             for el in data: # we verify if each of object of the pickle file is valide
@@ -33,7 +38,11 @@ class ClientBinaryRepository(ClientRepository):
 
     def save_file(self):
         try:
-            with open(self.__file_name, "wb") as f:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "wb") as f:
                 pickle.dump(self.clients_list, f)
         except IOError:
             raise IOError("File not found!")

@@ -1,6 +1,7 @@
 from src.repository.ClientRepository import ClientRepository
 from src.domain.Client import Client
 from src.domain.ClientValidator import ClientValidator
+import os
 
 class ClientFileRepository(ClientRepository):
     def __init__(self, file_name):
@@ -11,7 +12,11 @@ class ClientFileRepository(ClientRepository):
 
     def read_file(self):
         try:
-            with open(self.__file_name, "rt") as read:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "rt") as read:
                 for index, line in enumerate(read.readlines()):
                     if line != "\n":
                         tokens = line.upper().split("|")
@@ -31,7 +36,11 @@ class ClientFileRepository(ClientRepository):
 
     def save_file(self):
         try:
-            with open(self.__file_name, "wt") as write:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "wt") as write:
                 for client in self.clients_list:
                     line = str(client.client_id) + " | " + str(client.client_name) + "\n"
                     write.write(line)

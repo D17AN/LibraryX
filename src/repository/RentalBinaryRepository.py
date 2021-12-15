@@ -3,6 +3,7 @@ from src.domain.Rental import Rental
 from src.domain.RentalValidator import RentalValidator
 import pickle
 from copy import deepcopy
+import os
 
 class RentalBinaryRepository(RentalRepository):
     def __init__(self, file_name):
@@ -14,7 +15,11 @@ class RentalBinaryRepository(RentalRepository):
     def read_file(self):
         try:
             data = []
-            with open(self.__file_name, "rb") as f:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "rb") as f:
                 data = pickle.load(f)
 
             for el in data: # check if each object it's a valide one
@@ -32,7 +37,11 @@ class RentalBinaryRepository(RentalRepository):
 
     def save_file(self):
         try:
-            with open(self.__file_name, "wb") as f:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "wb") as f:
                 pickle.dump(self.rentals_list, f)
         except IOError:
             raise IOError("File not found!")

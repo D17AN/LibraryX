@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ce97ed-a0a1-49b3-a473-d5fd3d379096" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryX.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/BookBinaryRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/BookBinaryRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/BookFileRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/BookFileRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ClientBinaryRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ClientBinaryRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ClientFileRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ClientFileRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/RentalBinaryRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/RentalBinaryRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/RentalFileRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/RentalFileRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/settings.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +20,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/repository/RentalBinaryRepository.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/repository/ClientFileRepository.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/repository/BookFileRepository.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/repository/ClientBinaryRepository.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/repository/BookBinaryRepository.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/files/settings.properties" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="22JnWWZllFWJomRxjBobXv67zqL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding Apps\GitHub\Projects\LibraryX\src\files" />
       <recent name="C:\Coding Apps\GitHub\Projects\LibraryX\src" />
     </key>
   </component>
@@ -72,6 +89,13 @@
       <workItem from="1639564594571" duration="27000" />
       <workItem from="1639564623622" duration="22000" />
       <workItem from="1639567384765" duration="301000" />
+      <workItem from="1639568067017" duration="308000" />
+      <workItem from="1639568445179" duration="93000" />
+      <workItem from="1639569668779" duration="107000" />
+      <workItem from="1639570987363" duration="36000" />
+      <workItem from="1639571927713" duration="54000" />
+      <workItem from="1639571996412" duration="884000" />
+      <workItem from="1639572987473" duration="39000" />
     </task>
     <servers />
   </component>
@@ -88,8 +112,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LibraryX$main.coverage" NAME="main Coverage Results" MODIFIED="1639567674018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/LibraryX$main.coverage" NAME="main Coverage Results" MODIFIED="1639572869324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

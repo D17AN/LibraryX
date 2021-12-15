@@ -3,6 +3,7 @@ from copy import deepcopy
 from src.repository.BookRepository import BookRepository
 from src.domain.BookValidator import BookValidator
 from src.domain.Book import Book
+import os
 
 class BookBinaryRepository(BookRepository):
     def __init__(self, file_name):
@@ -14,7 +15,11 @@ class BookBinaryRepository(BookRepository):
     def read_file(self):
         try:
             data = []
-            with open(self.__file_name, "rb") as f:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "rb") as f:
                 data = pickle.load(f)
             for el in data: # validate each entity from data
                 self.__entity_validator.validate(el)
@@ -31,7 +36,11 @@ class BookBinaryRepository(BookRepository):
 
     def save_file(self):
         try:
-            with open(self.__file_name, "wb") as f:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "wb") as f:
                 pickle.dump(self.books_list, f)
         except IOError:
             raise IOError("File not found!")

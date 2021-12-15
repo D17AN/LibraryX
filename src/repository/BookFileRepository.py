@@ -1,7 +1,7 @@
 from src.repository.BookRepository import BookRepository
 from src.domain.BookValidator import BookValidator
 from src.domain.Book import Book
-
+import os
 class BookFileRepository(BookRepository):
     def __init__(self, file_name):
         super().__init__()
@@ -11,7 +11,11 @@ class BookFileRepository(BookRepository):
 
     def read_file(self):
         try:
-            with open(self.__file_name, "rt") as read:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "rt") as read:
                 for index, line in enumerate(read.readlines()):
                     if line != "\n":
                         tokens = line.strip().upper().split("|")
@@ -33,7 +37,11 @@ class BookFileRepository(BookRepository):
 
     def save_file(self):
         try:
-            with open(self.__file_name, "wt") as write:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "wt") as write:
                 for book in self.books_list:
                     line = str(book.book_id) + " | " + str(book.book_title) + " | " + str(book.book_author) + "\n"
                     write.write(line)

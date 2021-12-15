@@ -1,6 +1,7 @@
 from src.repository.RentalRepository import RentalRepository
 from src.domain.Rental import Rental
 from src.domain.RentalValidator import RentalValidator
+import os
 
 class RentalFileRepository(RentalRepository):
     def __init__(self, file_name):
@@ -11,7 +12,11 @@ class RentalFileRepository(RentalRepository):
 
     def read_file(self):
         try:
-            with open(self.__file_name, "rt") as read:
+            file_name = self.__file_name
+            if '_MEIPASS2' in os.environ:
+                file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
+
+            with open(file_name, "rt") as read:
                 for index, line in enumerate(read.readlines()):
                     if line != "\n":
                         tokens = line.upper().split("|")

@@ -10,10 +10,15 @@ from src.repository.RentalBinaryRepository import RentalBinaryRepository
 from src.repository.HistoryOperationsRepository import OperationsHistory
 from src.ui.UI import UI
 from src.gui.LibraryX import GUI
+import os
 
+file_name = "files/settings.properties"
+if '_MEIPASS2' in os.environ:
+    file_name = os.path.join(os.environ['_MEIPASS2'], file_name)
 
-with open("settings.properties", "r") as file:
+with open(file_name, "r") as file:
     repo_type = file.readline().strip().casefold().split()[2]
+    file_name = "files/settings.properties"
 
     book_repo = file.readline().strip().split()[2]
     book_repo = book_repo[1:len(book_repo)-1]
