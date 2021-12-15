@@ -12,7 +12,7 @@ from src.ui.UI import UI
 from src.gui.LibraryX import GUI
 
 
-with open("files/settings.properties", "r") as file:
+with open("settings.properties", "r") as file:
     repo_type = file.readline().strip().casefold().split()[2]
 
     book_repo = file.readline().strip().split()[2]
