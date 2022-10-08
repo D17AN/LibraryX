@@ -1,4 +1,4 @@
-# 💻 LibraryX Documentation
+# 💻 LibraryX
 A book rental application
 ## Informations:
 - It's used the simple feature-driven development.
