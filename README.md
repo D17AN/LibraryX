@@ -1,4 +1,5 @@
 # 💻 LibraryX Documentation
+A book rental application
 ## Informations:
 - It's used the simple feature-driven development.
 - The program provides a menu-driven console-based user interface and graphical user interface. The app is started by running main.py.
