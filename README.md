@@ -1,12 +1,15 @@
 # 💻 LibraryX Documentation
 ## Informations:
 - It's used the simple feature-driven development.
-- The program provides a menu-driven console-based user interface and graphical user interface. The user can start it either by the UI, GUI (Python must be installed).
+- The program provides a menu-driven console-based user interface and graphical user interface. The app is started by running main.py.
 - Implementation employs layered architecture and classes.
 - The repositories have 20 procedurally generated items at startup.
 - Provides specification and tests for all non-UI classes and methods(PyUnit test cases).
 - Implemented and used own exception classes.
 
+## Requirements:
+- A version of Python 3 must be installed. Recommended a version above 3.9.7.
+- To run the app I would recommend using an IDE, recommended PyCharm (Community Edition, which is the free version, is more than enough).
 
 ### Details
 LibraryX is an application for a book library. The application will store:
