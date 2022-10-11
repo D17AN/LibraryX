@@ -2,7 +2,7 @@
 A book rental application
 ## Informations:
 - It's used the simple feature-driven development.
-- The program provides a menu-driven console-based user interface and graphical user interface. The app is started by running main.py.
+- The program provides a menu-driven console-based user interface and graphical user interface. The app is started by running main.py, either by running the executable.
 - Implementation employs layered architecture and classes.
 - The repositories have 20 procedurally generated items at startup.
 - Provides specification and tests for all non-UI classes and methods(PyUnit test cases).
