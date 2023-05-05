@@ -30,3 +30,12 @@ LibraryX is an application for a book library. The application will store:
 6. 3 types of repositories: in memmory, text files and binary files. The decision of which type of repositories are used is made by setting.properties from the package 'files'. By default are used text files repositories.
 
 ### Showcase
+![1](https://user-images.githubusercontent.com/9745845/236555765-f416ab50-1978-41bd-9f3b-cddadac68dff.PNG)
+![2](https://user-images.githubusercontent.com/9745845/236555767-4bc5ff63-0c93-4136-b485-3458e58a31a5.PNG)
+![3](https://user-images.githubusercontent.com/9745845/236555769-f8d6913b-6f1c-449e-bdf3-645dea649d74.PNG)
+![4](https://user-images.githubusercontent.com/9745845/236555770-ff09362e-f8f5-4ced-bae3-3f3ec3c46d7d.PNG)
+![7](https://user-images.githubusercontent.com/9745845/236555774-c8779ac0-9cbe-48a3-ba2e-a6d024df10af.PNG)
+![6](https://user-images.githubusercontent.com/9745845/236555773-cfea16a1-aecf-48af-9b0b-402ae0848753.PNG)
+![5](https://user-images.githubusercontent.com/9745845/236555771-ba03e82c-ff15-4277-bec6-b8c6b5b0e183.PNG)
+
+
