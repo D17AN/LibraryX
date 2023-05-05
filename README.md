@@ -1,6 +1,6 @@
 # 💻 LibraryX
 A book rental application
-## Informations:
+### Informations:
 - It's used the simple feature-driven development.
 - The program provides a menu-driven console-based user interface and graphical user interface. The app is started by running main.py, either by running the executable.
 - Implementation employs layered architecture and classes.
@@ -8,7 +8,7 @@ A book rental application
 - Provides specification and tests for all non-UI classes and methods(PyUnit test cases).
 - Implemented and used own exception classes.
 
-## Requirements:
+### Requirements:
 - A version of Python 3 must be installed. Recommended a version above 3.9.7.
 - To run the app I would recommend using an IDE, recommended PyCharm (Community Edition, which is the free version, is more than enough).
 
@@ -18,7 +18,7 @@ LibraryX is an application for a book library. The application will store:
 - **Client**: `client_id`, `name`
 - **Rental**: `rental_id`, `book_id`, `client_id`, `rented_date`, `returned_date`
 
-## Functionalites
+### Functionalites
 1. Manage clients and books. The user can add, remove, update, and list both clients and books.
 2. Rent or return a book. A client can rent an available book. A client can return a rented book at any time. Only available books (those which are not currently rented) can be rented.
 3. Search for clients, books or rentals using any one of their fields (e.g. books can be searched for using id, title or author). The search works using case-insensitive, partial string matching, and returns all matching items.
@@ -28,3 +28,5 @@ LibraryX is an application for a book library. The application will store:
     - Most rented author. This provides the list of book authors, sorted in descending order of the number of rentals their books have.
 5. Unlimited undo/redo functionality. Each step will undo/redo the previous operation performed by the user. Undo/redo operations cascade and have a memory-efficient implementation(no superfluous list copying).
 6. 3 types of repositories: in memmory, text files and binary files. The decision of which type of repositories are used is made by setting.properties from the package 'files'. By default are used text files repositories.
+
+### Showcase
